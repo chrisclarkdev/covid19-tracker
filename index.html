@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Covid-19 Tracker</title>
+  </head>
+
+  <body>
+    <input type="text" id="countries" placeholder="Enter Country...." />
+    <button onclick="pushData()">Get Data</button>
+    <div class="container">
+      <div class="country">
+        <!-- <h1 id="c-id"></h1> -->
+      </div>
+      <div class="circle active">
+        <h2 id="active"></h2>
+      </div>
+      <div class="circle cases">
+        <h2 id="cases"></h2>
+      </div>
+      <div class="circle today">
+        <h2 id="casesToday"></h2>
+      </div>
+      <div class="circle deaths">
+        <h2 id="deaths"></h2>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
