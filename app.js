@@ -5,6 +5,7 @@ perDeath = document.getElementById("perDeath");
 todayDeaths = document.querySelector("#todayDeaths");
 recovered = document.querySelector('.recovered');
 tested = document.querySelector('.testing');
+critical = document.querySelector('.critical');
 
 document.title = "Covid-19 Tracker || Live Data";
 
@@ -14,17 +15,30 @@ function pushData() {
     .then((response) => {
       return response.json();
     })
-    .catch((err) => alert(err))
+    .catch((err) => console.log(err))
     .then((countries) => {
       console.log(countries);
+      function commaSeparateNumber(val){
+        while (/(\d+)(\d{3})/.test(val.toString())){
+          val = val.toString().replace(/(\d+)(\d{3})/, '$1'+','+'$2');
+        }
+        return val;
+      }
+      commaTested = commaSeparateNumber(countries.totalTests);
+      
+
       ifRecovered = countries.recovered === null ? 0 : countries.recovered;
-      console.log(ifRecovered)
+      commaRecovered = commaSeparateNumber(ifRecovered)
+      
       todayDeaths.innerHTML = `Today's deaths in ${countries.country} <h1 >${countries.todayDeaths}</h1>`;
       deaths.innerHTML = `Today's cases in  ${countries.country} <h1 >${countries.todayCases}</h1>`;
       active.innerHTML = ` <p>${countries.active}</p>`
-      recovered.innerHTML = ` <p>${ifRecovered}</p>`
+      recovered.innerHTML = ` <p>${commaRecovered}</p>`
+      critical.innerHTML= `<p> ${countries.critical}</p>`
       totalDeaths.innerHTML = `<p>${countries.deaths}</p>`
-      tested.innerHTML = `<h3>${countries.totalTests}</h3>`
+      tested.innerHTML = `<h3>${commaTested}</h3>`;
+      
+      
 
       document.title = `${countries.country} Covid-19 Tracker || Live Data`
       

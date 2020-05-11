@@ -5,10 +5,19 @@
 }
 body {
   background:  rgb(41, 41, 90);
+  /* margin-top: 40px; */
 }
 input {
   padding: 12px;
-  width: 10em;
+  width: 90%;
+  
+}
+.nav  {
+  background: rgb(41, 41, 90);
+  width: 50%;
+  margin: auto;
+  margin-top: 30px;
+  
 }
 button {
   
@@ -87,6 +96,9 @@ h1{
   background: rgb(6, 83, 114);
   /* width: 25%; */
 }
+.critical {
+  background: rgb(243, 69, 0);
+}
 #totalDeaths {
   background: rgb(40, 161, 40);
   /* width: 25%; */
@@ -125,14 +137,17 @@ h1{
 
 .testing{
   height: 60px;
-  width: 30%;
+  width: 40%;
   background: rgb(6, 61, 212);
   margin: auto;
+  margin-top: 0;
   
 }
 
 .testing h3 {
   color: #fff;
   text-align: center;
-  margin-top: -20px;
+  margin-top: -10px;
+  padding-top: 20px;
+
 }

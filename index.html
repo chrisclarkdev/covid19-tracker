@@ -9,8 +9,10 @@
   </head>
 
   <body>
+    <div class="nav">
     <input type="text" id="countries" placeholder="Enter Country...." />
     <button onclick="pushData()">Get Data</button>
+  </div>
     <div class="container-today">
       <div class="circle deaths-today">
         <h4 id="todayDeaths"></h4>
@@ -36,20 +38,18 @@
       <div class="chart">
         <h3>Recovered</h3>
       </div>
+      <div class="chart">
+        <h3>Critical</h3>
+      </div>
+      
        </div>
         <!-- summary title above -->
       <!-- summary info below  -->
     <div class="summary">
-      <div id="active" class="chart">
-      </div>
-      <div id="totalDeaths" class="chart">
-        
-      </div>
-      <div class="recovered chart" >
-        
-        
-
-      </div>
+      <div id="active" class="chart"></div>
+      <div id="totalDeaths" class="chart"></div>
+      <div class="recovered chart" ></div>
+      <div class="critical chart"></div>
     </div>
     <script src="app.js"></script>
   </body>
