@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Covid-19 Tracker</title>
+    <!-- <title>Covid-19 Tracker</title> -->
   </head>
 
   <body>
@@ -19,17 +19,30 @@
         <h4 id="deaths"></h4>
       </div>
     </div>
-
+    <div class="summary-title">
+      <div class="chart">
+      <h3>Active Cases</h3>
+      </div>
+      <div class="chart">
+        <h3>Total Deaths</h3>
+      </div>
+      <div class="chart">
+        <h3>Recovered</h3>
+      </div>
+       </div>
+        <!-- summary title above -->
+      <!-- summary info below  -->
     <div class="summary">
-      <div id="active">
-       <p>100000</p> 
+      <div id="active" class="chart">
+       
       </div>
-      <div #totalDeaths>
-        <p>34000</p>
-      </div>
-      <div class="recovered">
-        <p>23456</p>
+      <div id="totalDeaths" class="chart">
         
+      </div>
+      <div class="recovered chart" >
+        
+        
+
       </div>
     </div>
     <script src="app.js"></script>

@@ -31,28 +31,26 @@ h1 {
   margin: 10px 50px;
   align-self: center;
   align-content: center;
-  
-  /* margin: auto; */
-  
   padding: 20px;
   
 }
 .deaths-today {
-  background: rgb(167, 0, 8);
+  background: rgb(95, 6, 10);
   box-shadow: rgb(32, 30, 30) 3px 5px 10px;
 }
 .cases-today {
-  background-color: rgb(44, 190, 7);
+  background-color: rgb(40, 161, 40);
   box-shadow: rgb(32, 30, 30) 3px 5px 10px;
 }
 .container-today {
-  margin-top: 50px;
+  margin-top: 0px;
   display: flex;
   flex-wrap: wrap;
   width: 70%;
   margin: auto;
   background: rgb(41, 41, 90);
-  height: 100vh;
+
+  height: 50vh;
   justify-content: center;
 }
 h4{
@@ -61,4 +59,53 @@ h4{
 h1{
   margin-top: 30px;
   font-size: 60px ;
+}
+.summary {
+  width: 50%;
+  height: 60px;
+  /* background: rgb(245, 242, 242); */
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-bottom: 300px;
+  border-radius: 7px;
+  /* border: 7px solid #eee; */
+  order: 3;
+}
+.summary-title {
+  width: 50%;
+  height: 60px;
+  background: rgb(245, 242, 242);
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+.summary-title h3 {
+  margin: 20px;
+}
+.recovered {
+  background: rgb(6, 83, 114);
+  /* width: 25%; */
+}
+#totalDeaths {
+  background: rgb(40, 161, 40);
+  /* width: 25%; */
+}
+#active {
+  background: rgb(95, 6, 1);
+  /* width: 25%; */
+}
+.chart p{
+  text-align: center;
+  color: #fff;
+  /* margin-top: 40px; */
+}
+.chart {
+  /* margin-left: 100px; */
+  width:20%;
+}
+.chart h3{
+  text-align: center;
+
 }
