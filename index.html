@@ -11,24 +11,25 @@
   <body>
     <input type="text" id="countries" placeholder="Enter Country...." />
     <button onclick="pushData()">Get Data</button>
-    <div class="container">
-      <div class="country">
-        <h1 id="c-id"></h1>
+    <div class="container-today">
+      <div class="circle deaths-today">
+        <h4 id="todayDeaths"></h4>
       </div>
-      <div class="circle active">
-        <h2 id="active"></h2>
+      <div class="circle deaths cases-today ">
+        <h4 id="deaths"></h4>
       </div>
-      <div class="circle cases">
-        <h2 id="cases"></h2>
+    </div>
+
+    <div class="summary">
+      <div id="active">
+       <p>100000</p> 
       </div>
-      <div class="circle today">
-        <h2 id="casesToday"></h2>
+      <div #totalDeaths>
+        <p>34000</p>
       </div>
-      <div class="circle">
-        <h2 id="todayDeaths"></h2>
-      </div>
-      <div class="circle deaths">
-        <h2 id="deaths"></h2>
+      <div class="recovered">
+        <p>23456</p>
+        
       </div>
     </div>
     <script src="app.js"></script>
