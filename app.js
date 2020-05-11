@@ -4,6 +4,7 @@ active = document.getElementById("active");
 perDeath = document.getElementById("perDeath");
 todayDeaths = document.querySelector("#todayDeaths");
 recovered = document.querySelector('.recovered');
+tested = document.querySelector('.testing');
 
 document.title = "Covid-19 Tracker || Live Data";
 
@@ -23,6 +24,7 @@ function pushData() {
       active.innerHTML = ` <p>${countries.active}</p>`
       recovered.innerHTML = ` <p>${ifRecovered}</p>`
       totalDeaths.innerHTML = `<p>${countries.deaths}</p>`
+      tested.innerHTML = `<h3>${countries.totalTests}</h3>`
 
       document.title = `${countries.country} Covid-19 Tracker || Live Data`
       

@@ -63,7 +63,6 @@ h1{
 .summary {
   width: 50%;
   height: 60px;
-  /* background: rgb(245, 242, 242); */
   display: flex;
   justify-content: center;
   margin: auto;
@@ -75,7 +74,7 @@ h1{
 .summary-title {
   width: 50%;
   height: 60px;
-  background: rgb(245, 242, 242);
+  background: rgb(41, 41, 90);
   display: flex;
   justify-content: center;
   margin: auto;
@@ -99,13 +98,41 @@ h1{
 .chart p{
   text-align: center;
   color: #fff;
-  /* margin-top: 40px; */
+  margin-top: 20px;
 }
 .chart {
   /* margin-left: 100px; */
   width:20%;
+  
 }
 .chart h3{
   text-align: center;
+  color: #fff;
 
+}
+.testing-summary {
+  height: 60px;
+  width: 30%;
+  justify-content: center;
+  background: rgb(41, 41, 90);
+  margin: auto;
+}
+.testing-summary h2{
+  color: #fff;
+  text-align: center;
+  margin-top: -100px;
+}
+
+.testing{
+  height: 60px;
+  width: 30%;
+  background: rgb(6, 61, 212);
+  margin: auto;
+  
+}
+
+.testing h3 {
+  color: #fff;
+  text-align: center;
+  margin-top: -20px;
 }
