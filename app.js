@@ -10,7 +10,7 @@ critical = document.querySelector('.critical');
 document.title = "Covid-19 Tracker || Live Data";
 
 function pushData() {
-  let country = document.getElementById("countries").value;
+  let country = document.getElementById("countries").value || "UK";
   fetch(`https://coronavirus-19-api.herokuapp.com/countries/${country}`)
     .then((response) => {
       return response.json();
