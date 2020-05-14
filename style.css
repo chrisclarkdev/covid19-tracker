@@ -1,6 +1,6 @@
 
 
-* {
+/* * {
   margin: 0;
   padding: 0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -146,19 +146,107 @@ h1{
   padding-top: 20px;
 }
 
+}*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+body {
+  width: 100%;
+  max-width: 414px;
+  background: rgb(15, 15, 44);
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+}
+.nav {
+  width: 70%;
+  margin: auto;
+}
+input {
+  padding: 15px 0 ;
+  margin: 12px;
+  width: 55%;
+  /* border: 2px solid #d6da20; */
+  border-radius: 7px;
 
-@media screen and (max-width: 700px){
-  body {
-    background: rgb(255, 0, 0);
-  }
-  /* .circle {
-    width: 100%;
-    height: 100px;
-  } */
-  .container-today {
-    background: rgb(255, 255, 255);
-    border-radius: 10px;
-    height: 70vh;
-  }
+}
+input:focus {
+  color: blue;
+  font-size: small;
+}
+button{
+  padding: 15px;
+  border-radius: 5px;
+  border: none;
+  background: rgb(4, 119, 212);
+  color: #fff;
+}
+.container-today {
+  width: 70%;
+  padding: 1px;
+  background: rgb(2, 28, 99);
+  margin: auto;
+  border-radius: 8px;
+  box-shadow: 4px 5px 15px #141313;
+}
+.today h4 {
+  text-align: center;
+}
+
+.testing-summary{
+  background: rgb(15, 15, 44);
+  width: 70%;
+  margin: auto;
+  ;
+}
+
+.testing-summary h2 {
+  text-align: center;
+}
+
+.testing{
+  text-align: center;
+  background: rgb(60, 177, 7);
+  width: 70%;
+  margin: auto;
+  padding: 3px 0;
+}
+
+.summary-title{
+  padding: 10px;
+  display: flex;
+  font-size: 10px;
+  width: 70%;
+  margin: auto;
+}
+.chart{
+  flex-grow: 2;
+}
+.summary{
+  display: flex;
+  background: rgb(168, 145, 13);
+  margin: auto;
+  width: 70%;
+  text-align: center;
+}
+.critical {
+  /* background: #000;168, 145, 13 */
+  background: rgb(168, 145, 13);
+  padding: 10px 0;
+}
+
+.recovered {
+  /* background: #000;168, 145, 13 */
+  background: rgb(6, 100, 207);
+  padding: 10px 15px;
+}
+
+#totalDeaths {
+  /* background: #000;168, 145, 13 */
+  background: rgb(5, 214, 5);
+  padding: 10px 0;
+}
+
+#active {
+  /* background: #000;168, 145, 13 */
+  background: rgb(97, 8, 5);
+  padding: 10px 0;
 }
 
