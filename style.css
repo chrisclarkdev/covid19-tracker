@@ -154,15 +154,16 @@ body {
   background: rgb(15, 15, 44);
   font-family: 'Roboto', sans-serif;
   color: #fff;
+  margin: auto;
 }
 .nav {
-  width: 70%;
-  margin: auto;
+  width: 100%;
+  margin: auto 0;
 }
 input {
   padding: 15px 0 ;
   margin: 12px;
-  width: 55%;
+  width: 60%;
   /* border: 2px solid #d6da20; */
   border-radius: 7px;
 
@@ -217,6 +218,9 @@ button{
   margin: auto;
 }
 .chart{
+  flex-grow: 2;
+}
+.charts{
   flex-grow: 2;
 }
 .summary{
