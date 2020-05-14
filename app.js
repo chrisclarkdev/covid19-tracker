@@ -25,6 +25,9 @@ function pushData() {
         return val;
       }
       commaTested = commaSeparateNumber(countries.totalTests);
+      commaActive = commaSeparateNumber(countries.active);
+      commaCritical = commaSeparateNumber(countries.critical);
+      commaTotalDeaths = commaSeparateNumber(countries.deaths);
       
 
       ifRecovered = countries.recovered === null ? 0 : countries.recovered;
@@ -32,10 +35,10 @@ function pushData() {
       
       todayDeaths.innerHTML = `Today's deaths in ${countries.country} <h1 >${countries.todayDeaths}</h1>`;
       deaths.innerHTML = `Today's cases in  ${countries.country} <h1 >${countries.todayCases}</h1>`;
-      active.innerHTML = ` <p>${countries.active}</p>`
+      active.innerHTML = ` <p>${commaActive}</p>`
       recovered.innerHTML = ` <p>${commaRecovered}</p>`
-      critical.innerHTML= `<p> ${countries.critical}</p>`
-      totalDeaths.innerHTML = `<p>${countries.deaths}</p>`
+      critical.innerHTML= `<p> ${commaCritical}</p>`
+      totalDeaths.innerHTML = `<p>${commaTotalDeaths}</p>`
       tested.innerHTML = `<h3>${commaTested}</h3>`;
       
       
