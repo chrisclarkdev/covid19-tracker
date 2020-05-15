@@ -10,21 +10,21 @@ body {
   margin: auto;
 }
 .nav {
-  width: 100%;
-  margin: auto 0;
+  width: 70%;
+  margin: auto;
+  background: rgb(168, 145, 13);
 }
 input {
   padding: 15px 0 ;
-  margin: 12px;
-  width: 60%;
+  margin: 20px;
+  width: 80%;
   text-align: center;
-  /* border: 2px solid #d6da20; */
-  border-radius: 7px;
-
+  
 }
 input:focus {
   color: blue;
   font-size: small;
+  font-weight: 700;
 }
 button{
   padding: 15px;
@@ -38,7 +38,6 @@ button{
   padding: 1px;
   background: rgb(2, 28, 99);
   margin: auto;
-  /* box-shadow: 4px 5px 15px #303136; */
 }
 .today h4 {
   text-align: center;
@@ -46,9 +45,9 @@ button{
 
 .testing-summary{
   background: rgb(15, 15, 44);
+  /* background: #000; */
   width: 70%;
   margin: auto;
-  ;
 }
 
 .testing-summary h2 {
@@ -107,3 +106,38 @@ button{
   padding: 10px 0;
 }
 
+@media screen and (min-width : 800px){
+  body{
+  /* background: rgb(29, 14, 95); */
+  max-width: 1200px;
+}
+input {
+  padding: 15px 0 ;
+  margin: 20px;
+  width: 80%;
+  text-align: center;
+}
+.container-today{
+  display: flex;
+  background: fff;
+  border: none;
+  padding: 30px 0;
+  background: rgb(15, 15, 44);
+  margin-bottom: -10px;
+}
+.deaths-today{
+  background: rgb(88, 15, 15);
+}
+
+.cases-today{
+  background: rgb(4, 116, 14);
+}
+.today {
+  flex-grow: 2;
+}
+.testing-summary{
+  padding: 2px 0;
+  margin: auto;
+  margin-bottom: 5px;
+}
+}
