@@ -116,6 +116,18 @@ button{
   background: rgb(97, 8, 5);
   padding: 10px 0;
 }
+
+.footer {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.footer i {
+  color: red;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+}
 /* media queries for larger screens */
 @media screen and (min-width : 800px){
   body{
