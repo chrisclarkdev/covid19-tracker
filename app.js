@@ -33,6 +33,7 @@ function pushData() {
       ifActive = countries.active === null ? "No Data" : countries.active;
       ifRecovered = countries.recovered === null ? "No Data" : countries.recovered;
       commaRecovered = commaSeparateNumber(ifRecovered)
+      console.log(ifActive);
       
       todayDeaths.innerHTML = `Today's deaths in ${countries.country} <h1 >${countries.todayDeaths}</h1>`;
       deaths.innerHTML = `Today's cases in  ${countries.country} <h1 >${countries.todayCases}</h1>`;
