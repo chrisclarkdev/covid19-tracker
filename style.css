@@ -71,6 +71,10 @@ button{
 }
 .chart{
   flex-grow: 2;
+
+}
+.chart h3 {
+  text-align: center;
 }
 .charts{
   flex-grow: 2;
