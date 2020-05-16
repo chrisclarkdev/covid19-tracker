@@ -10,26 +10,33 @@ body {
 .nav {
   width: 70%;
   margin: auto;
-  background: rgb(168, 145, 13);
+  background: rgb(85, 86, 87);
+  display: flex;
+  flex-direction: column;
 }
 input {
   padding: 15px 0 ;
-  margin: 20px;
-  width: 80%;
+  /* margin: 20px 0px; */
+  width: 90%;
   text-align: center;
+  margin: auto;
+  margin-bottom: 10px;
   
 }
 input:focus {
-  color: blue;
+  color: rgb(0, 0, 0);
   font-size: small;
   font-weight: 700;
+  border: 1px solid rgb(0, 149, 248);
 }
 button{
-  padding: 15px;
-  border-radius: 5px;
+  padding: 15px 0;
+  width: 90%;
   border: none;
   background: rgb(4, 119, 212);
   color: #fff;
+  /* margin: auto; */
+  margin: auto;
 }
 .container-today {
   width: 70%;
