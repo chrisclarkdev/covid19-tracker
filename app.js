@@ -25,13 +25,15 @@ function pushData() {
         return val;
       }
       commaTested = commaSeparateNumber(countries.totalTests);
-      commaActive = commaSeparateNumber(countries.active);
+//       commaActive = commaSeparateNumber(countries.active);
       commaCritical = commaSeparateNumber(countries.critical);
       commaTotalDeaths = commaSeparateNumber(countries.deaths);
       
-
-      ifRecovered = countries.recovered === null ? 0 : countries.recovered;
-      commaRecovered = commaSeparateNumber(ifRecovered)
+      ifActive = countries.active === null ? "No Data" : countries.active;
+      ifRecovered = countries.recovered === null ? "No Data" : countries.recovered;
+      commaRecovered = commaSeparateNumber(ifRecovered);
+      commaActive = commaSeperateNumber(ifActive);
+    
       
       todayDeaths.innerHTML = `Today's deaths in ${countries.country} <h1 >${countries.todayDeaths}</h1>`;
       deaths.innerHTML = `Today's cases in  ${countries.country} <h1 >${countries.todayCases}</h1>`;
