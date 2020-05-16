@@ -16,7 +16,7 @@ function pushData() {
     .then((response) => {
       return response.json();
     })
-    .catch((err) => console.log(err))
+    .catch((err) => alert("Please type in a country name"))
     .then((countries) => {
       
       function commaSeparateNumber(val){

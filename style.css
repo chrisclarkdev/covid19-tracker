@@ -116,40 +116,49 @@ button{
   background: rgb(97, 8, 5);
   padding: 10px 0;
 }
-
+/* media queries for larger screens */
 @media screen and (min-width : 800px){
   body{
-  /* background: rgb(29, 14, 95); */
-  max-width: 1200px;
-}
-input {
-  padding: 15px 0 ;
-  margin: 20px;
-  width: 80%;
-  text-align: center;
-}
-.container-today{
-  display: flex;
-  background: fff;
-  border: none;
-  padding: 30px 0;
-  background: rgb(15, 15, 44);
-  margin-bottom: -10px;
-}
-.deaths-today{
-  background: rgb(88, 15, 15);
-}
+    /* background: rgb(29, 14, 95); */
+    max-width: 1200px;
+  }
+  .nav{
+    display: flex;
+    flex-direction: row;
+  }
+  input {
+    padding: 15px 0 ;
+    margin: 20px;
+    width: 80%;
+    text-align: center;
+  }
+  button {
+    width: 100px;
+    /* background: #000; */
+  }
+  .container-today{
+    display: flex;
+    background: fff;
+    border: none;
+    padding: 30px 0;
+    background: rgb(15, 15, 44);
+    /* background: #000; */
+    margin-bottom: -10px;
+  }
+  .deaths-today{
+    background: rgb(88, 15, 15);
+  }
 
-.cases-today{
-  background: rgb(4, 116, 14);
-}
-.today {
-  flex-grow: 2;
-}
-.testing-summary{
-  padding: 2px 0;
-  margin: auto;
-  margin-bottom: 5px;
-}
+  .cases-today{
+    background: rgb(4, 116, 14);
+  }
+  .today {
+    flex-grow: 2;
+  }
+  .testing-summary{
+    padding: 2px 0;
+    margin: auto;
+    margin-bottom: 5px;
+  }
 }
 /*  completed */
