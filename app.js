@@ -25,14 +25,15 @@ function pushData() {
         }
         return val;
       }
-      
+      console.log(countries.cases - countries.deaths)
+      console.log(countries)
       country.value = "";
       commaTested = commaSeparateNumber(countries.totalTests);
       // commaActive = commaSeparateNumber(countries.active);
       commaCritical = commaSeparateNumber(countries.critical);
       commaTotalDeaths = commaSeparateNumber(countries.deaths);
       
-      ifActive = countries.active === null ? "No Data" : countries.active;
+      ifActive = countries.active === null ? countries.cases - countries.deaths : countries.active;
       ifRecovered = countries.recovered === null ? "No Data" : countries.recovered;
       commaRecovered = commaSeparateNumber(ifRecovered)
       commaActive = commaSeparateNumber(ifActive);
