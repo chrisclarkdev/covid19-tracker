@@ -2,7 +2,7 @@
 body {
   width: 100%;
   max-width: 414px;
-  background: rgb(15, 15, 44);
+  background: #0f0f2c;
   font-family: 'Roboto', sans-serif;
   color: #fff;
   margin: auto;
@@ -35,7 +35,7 @@ button{
   padding: 15px 0;
   width: 90%;
   border: none;
-  background: rgb(4, 119, 212);
+  background: #0477d4;
   color: #fff;
   /* margin: auto; */
   margin: auto;
