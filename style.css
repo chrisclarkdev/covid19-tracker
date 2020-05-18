@@ -126,7 +126,7 @@ button{
 }
 a {
   color: #fff;
-  text-decoration: none;
+  text-decoration: underline;
 }
 /* media queries for larger screens */
 @media screen and (min-width : 800px){
