@@ -50,11 +50,6 @@ function pushData() {
       critical.innerHTML= `<p> ${commaCritical}</p>`
       totalDeaths.innerHTML = `<p>${commaTotalDeaths}</p>`
       tested.innerHTML = `<h3>${commaTested}</h3>`;
-      
-      
-
       document.title = `${countries.country} Covid-19 Tracker || Live Data`
-      
-
     });
 }
