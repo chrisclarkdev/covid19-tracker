@@ -35,7 +35,6 @@ function pushData() {
         }
         return val;
       }
-      
       country.value = "";
       commaTested = commaSeparateNumber(countries.totalTests);
       // commaActive = commaSeparateNumber(countries.active);
