@@ -1,7 +1,13 @@
-if('serviceWorker' in navigator){
-  navigator.serviceWorker.register('/sw.js')
-    .then((reg) => console.log('service worker registered', reg))
-    .catch((err) => console.log('service worker not registered', err))
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('sw.js')
+    .then(registration => {
+      console.log('SW registered with scope:', registration.scope);
+    })
+    .catch(err => {
+      console.error('Registration failed:', err);
+    });
+  });
 }
 // https://coronavirus-19-api.herokuapp.com/countries
 countryName = document.getElementById("c-id");
@@ -12,10 +18,11 @@ recovered = document.querySelector('.recovered');
 tested = document.querySelector('.testing');
 critical = document.querySelector('.critical');
 document.title = "Covid-19 Tracker || Live Data";
+
 function pushData() {
   let country = document.getElementById("countries"); 
-  countryA = country.value || "UK";
-  fetch(`https://coronavirus-19-api.herokuapp.com/countries/${countryA}`)
+  countryA = country.value;
+  fetch(`https://coronavirus-19-api.herokuapp.com/countries/${countryA || 'Spain'}`)
     .then((response) => {
       return response.json();
     })
