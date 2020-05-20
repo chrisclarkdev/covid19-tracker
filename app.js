@@ -1,3 +1,8 @@
+if('serviceWorker' in navigator){
+  navigator.serviceWorker.register('/sw.js')
+    .then((reg) => console.log('service worker registered', reg))
+    .catch((err) => console.log('service worker not registered', err))
+}
 // https://coronavirus-19-api.herokuapp.com/countries
 countryName = document.getElementById("c-id");
 active = document.getElementById("active");
@@ -6,9 +11,7 @@ todayDeaths = document.querySelector("#todayDeaths");
 recovered = document.querySelector('.recovered');
 tested = document.querySelector('.testing');
 critical = document.querySelector('.critical');
-
 document.title = "Covid-19 Tracker || Live Data";
-
 function pushData() {
   let country = document.getElementById("countries"); 
   countryA = country.value || "UK";
@@ -46,11 +49,6 @@ function pushData() {
       critical.innerHTML= `<p> ${commaCritical}</p>`
       totalDeaths.innerHTML = `<p>${commaTotalDeaths}</p>`
       tested.innerHTML = `<h3>${commaTested}</h3>`;
-      
-      
-
       document.title = `${countries.country} Covid-19 Tracker || Live Data`
-      
-
     });
-}
+  }
