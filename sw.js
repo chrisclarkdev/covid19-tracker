@@ -8,7 +8,7 @@ const assets = [
   'https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap'
 ];
  
-const staticCacheName = 'site-static';
+const staticCacheName = 'site-static-v1.3';
 //install service worker
 self.addEventListener('install', evt => {
   // console.log('service worker has been installed')
@@ -22,11 +22,23 @@ self.addEventListener('install', evt => {
 
 //  activate service worker 
 
-self.addEventListener('active', evt => {
-  // console.log('service worker activated')
+self.addEventListener('activate', evt => {
+  evt.waitUntil(
+    caches.keys().then(keys => {
+      return Promise.all(keys
+        .filter(key => key !== staticCacheName)
+        .map(key => caches.delete(key))
+      )
+    })
+  );
 });
 
 
 self.addEventListener('fetch', evt => {
-  // console.log('fetch Event ', evt)
-})
+  // console.log(evt);
+  evt.respondWith(
+    caches.match(evt.request).then(cacheRes => {
+      return cacheRes || fetch(evt.request);
+    })
+  )
+});
