@@ -9,6 +9,7 @@ const assets = [
 ];
  
 const staticCacheName = 'site-static-v1.3';
+const dynamicCache = 'site-dynamic-v1';
 //install service worker
 self.addEventListener('install', evt => {
   // console.log('service worker has been installed')
@@ -38,7 +39,12 @@ self.addEventListener('fetch', evt => {
   // console.log(evt);
   evt.respondWith(
     caches.match(evt.request).then(cacheRes => {
-      return cacheRes || fetch(evt.request);
+      return cacheRes || fetch(evt.request).then(fetchRes => {
+        return caches.open(dynamicCache).then(cache => {
+          cache.put(evt.request.url, fetchRes.clone());
+          return fetchRes;
+        });
+      });
     })
   )
 });
