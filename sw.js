@@ -8,7 +8,7 @@ const assets = [
   'https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap'
 ];
  
-const staticCacheName = 'site-static-v1.3';
+const staticCacheName = 'site-static-v1.4.1';
 const dynamicCache = 'site-dynamic-v1';
 //install service worker
 self.addEventListener('install', evt => {
