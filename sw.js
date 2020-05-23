@@ -5,11 +5,12 @@ const assets = [
   'style.css',
   'css/font-awesome.css',
   'css/font-awesome.min.css',
-  'https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap'
+  'https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap',
+  '/fallback.html'
 ];
  
 const staticCacheName = 'site-static-v1.4.1';
-const dynamicCache = 'site-dynamic-v1';
+const dynamicCacheName = 'site-dynamic-v1';
 //install service worker
 self.addEventListener('install', evt => {
   // console.log('service worker has been installed')
@@ -27,7 +28,7 @@ self.addEventListener('activate', evt => {
   evt.waitUntil(
     caches.keys().then(keys => {
       return Promise.all(keys
-        .filter(key => key !== staticCacheName)
+        .filter(key => key !== staticCacheName && key !== dynamicCacheName)
         .map(key => caches.delete(key))
       )
     })
@@ -40,11 +41,11 @@ self.addEventListener('fetch', evt => {
   evt.respondWith(
     caches.match(evt.request).then(cacheRes => {
       return cacheRes || fetch(evt.request).then(fetchRes => {
-        return caches.open(dynamicCache).then(cache => {
+        return caches.open(dynamicCacheName).then(cache => {
           cache.put(evt.request.url, fetchRes.clone());
           return fetchRes;
         });
       });
-    })
+    }).catch(() => caches.match('/fallback.html'))
   )
 });
