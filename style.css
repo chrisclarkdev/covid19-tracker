@@ -36,10 +36,13 @@ button{
   padding: 15px 0;
   width: 90%;
   border: none;
-  background: #0477d4;
+  background: rgba(4, 118, 212);
   color: #fff;
-  /* margin: auto; */
+  cursor: pointer;
   margin: auto;
+}
+button:hover{
+  background: rgba(4, 118, 212, 0.726);
 }
 .container-today {
   width: 70%;
@@ -71,9 +74,9 @@ button{
 }
 
 .summary-title{
-  padding: 10px;
+  padding: 10px 0 ;
   display: flex;
-  font-size: 10px;
+  font-size: 12px;
   width: 70%;
   margin: auto;
 }
