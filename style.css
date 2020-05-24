@@ -32,6 +32,7 @@ input:focus {
   font-weight: 700;
   border: 1px solid rgb(0, 149, 248);
 }
+/* button styles */
 button{
   padding: 15px 0;
   width: 90%;
