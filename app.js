@@ -2,7 +2,7 @@ if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('sw.js')
     .then(registration => {
-      console.log('SW registered with scope:', registration.scope);
+      // console.log('SW registered with scope:', registration.scope);
     })
     .catch(err => {
       console.error('Registration failed:', err);
@@ -28,7 +28,7 @@ function pushData() {
     })
     .catch((err) => alert("Please type in a country name"))
     .then((countries) => {
-      console.log(countries.totalTests)
+     
       
       function commaSeparateNumber(val){
         while (/(\d+)(\d{3})/.test(val.toString())){
@@ -46,8 +46,7 @@ function pushData() {
       ifRecovered = countries.recovered === null ? "No Data" : countries.recovered;
       commaRecovered = commaSeparateNumber(ifRecovered)
       commaActive = commaSeparateNumber(ifActive);
-      console.log(commaActive);
-      
+      console.log(commaActive);     
       todayDeaths.innerHTML = `Today's deaths in ${countries.country} <h1 >${countries.todayDeaths}</h1>`;
       deaths.innerHTML = `Today's cases in  ${countries.country} <h1 >${countries.todayCases}</h1>`;
       active.innerHTML = ` <p>${commaActive}</p>`
